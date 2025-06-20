@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+
+//a special component that lets you add a particular component to every route, 
+// like a navbar 
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -19,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolage.variable} antialiased`}>{children}</body>
-    </html>
+      <body className={`${bricolage.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
+    </html> //children - simply what every page shows for that page 
   );
 }
