@@ -182,9 +182,9 @@ body {
   }
 
   .companion-section {
-    @apply border-2 border-orange-500 w-2/3 max-sm:w-full flex flex-col gap-4 justify-center items-center rounded-lg;
-  }
-
+    @apply border-2 border-orange-500 w-3/3 max-sm:w-full flex flex-col gap-4 justify-center items-center rounded-lg;
+  } 
+/* changed a bit ^ */
   .companion-avatar {
     @apply size-[300px] flex items-center justify-center rounded-lg max-sm:size-[100px] mt-4;
   }
@@ -223,3 +223,42 @@ body {
     scrollbar-width: none;
   }
 }
+
+
+/* CSS */
+.button-24 {
+  background: black;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  /* width: calc(3/3 * 100%) */
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+/* <div class ="bg-amber-50 h-10 border-4 border-green-600 
+flex justify-center items-center rounded-2xl my-10 m-2 p-6
+">
+  <h1 class = "text-blue-900 text-center text-lg font-mono font-extrabold text-[23px]">soccerranker.com</h1>
+</div>
+
+<!-- jit (generates styles on demand) compiler removes the unused css styles, keeping the css bundle as small as possible  --> */

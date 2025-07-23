@@ -1,11 +1,11 @@
 export const subjects = [
-  "maths",
+  "math",
   "language",
   "science",
   "history",
   "coding",
   "economics",
-  "computerscience", 
+  "computer science", 
   "machine learning"
 ];
 // two new subjects added cs & ml 
@@ -77,16 +77,16 @@ export const recentSessions = [
   // two new sessions added, cs & ml 
   {
     id: "7",
-    subject: "computer science",
-    name: "Picheswarao Professor",
+    subject: "computerscience",
+    name: "Picheswarao the Professor",
     topic: "The Basics of Computer Science",
     duration: 10,
     color: "#34d6f0",
   },
   {
     id: "8",
-    subject: "machine learning",
-    name: "Machine Maniac",
+    subject: "machinelearning",
+    name: "Machy the Machine Maniac",
     topic: "Intro to Decision Trees",
     duration: 15,
     color: "#F9AC07",
