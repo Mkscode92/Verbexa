@@ -40,6 +40,8 @@ interface GetAllCompanions {
   page?: number;
   subject?: string | string[];
   topic?: string | string[];
+  durationMin?: number;
+  durationMax?: number;
 }
 
 interface BuildClient {

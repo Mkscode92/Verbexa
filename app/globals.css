@@ -144,6 +144,10 @@ body {
   .companions-grid {
     @apply flex flex-wrap gap-4 w-full max-md:justify-center;
   }
+
+  .search-input { 
+    @apply relative border border-black rounded-lg items-center flex gap-2 px-2 py-1 h-fit;
+  }
   .companion-card {
     @apply flex flex-col rounded-4xl border border-black px-4 py-4 gap-5 w-full min-lg:max-w-[410px] justify-between;
   }

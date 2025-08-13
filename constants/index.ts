@@ -8,12 +8,19 @@ export const subjects = [
   "computer science", 
   "machine learning"
 ];
+
+export const durationRanges = [
+  {label: "0-15 min", min: 0, max: 15},
+  {label: "15-30 min", min: 15, max: 30},
+  {label: "30-60 min", min: 30, max: 60}, 
+  {label: "60+ min", min: 60, max: 0}
+]
 // two new subjects added cs & ml 
 export const subjectsColors = {
   science: "#E5D0FF",
-  maths: "#FFDA6E",
+  math: "#27C2F5",
   language: "#BDE7FF",
-  coding: "#FFC8E4",
+  coding: "#CEE1ED",
   history: "#FFECC8",
   economics: "#C8FFDF",
   computerscience: "#34D6F0",
