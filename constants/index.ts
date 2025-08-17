@@ -43,7 +43,7 @@ export const recentSessions = [
   },
   {
     id: "2",
-    subject: "maths",
+    subject: "math",
     name: "Countsy the Number Wizard",
     topic: "Derivatives & Integrals",
     duration: 30,

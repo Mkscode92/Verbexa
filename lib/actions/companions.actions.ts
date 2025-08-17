@@ -22,22 +22,6 @@ export const getAllCompanions = async ({limit = 10, page = 1, subject, topic, du
 
     let query = supabase.from('companions').select();
 
-    // basically will allow us to get specific companions via subject and topic 
-    // if(subject && topic && durationMin && durationMax) { 
-    //     query = query.ilike('subject', `%${subject}%`)
-    //     .or(`topic.ilike.%${topic}%,name.ilike.%${topic}%`)
-    //     .gte('duration', durationMin)
-    //     .lte('duration', durationMax)
-    // } else if(subject) { 
-    //     query = query.ilike('subject', `%${subject}%`)
-    // } else if (topic)  {
-    //     query = query.or(`topic.ilike.%${topic}%,name.ilike.%${topic}%`)
-    // } else if(durationMin) { 
-    //     query = query.gte('duration', durationMin)
-    // } else if(durationMax) { 
-    //     query = query.lte('duration', durationMax)
-    // }
-
     if (subject) {
         query = query.ilike('subject', `%${subject}%`);
     }
@@ -56,4 +40,18 @@ export const getAllCompanions = async ({limit = 10, page = 1, subject, topic, du
     const {data: companions, error} = await query; // retrieve values 
     if(error) throw new Error(error.message); 
     return companions;
+}
+
+export const getCompanion = async (id: string) => {
+    const supabase = createSupabaseClient();
+
+    const {data, error} = await supabase
+        .from('companions')
+        .select()
+        .eq('id', id);
+
+    if(error) return console.log(error); 
+    return data[0];
+
+    
 }
